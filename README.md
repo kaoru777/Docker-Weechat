@@ -13,7 +13,7 @@ services:
     stdin_open: true
     tty: true
     volumes:
-      - weechat:/weechat
+      - weechat:/home/xyz/.weechat
     environment:
       - PUID=1000
       - PGID=1000

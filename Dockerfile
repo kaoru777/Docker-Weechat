@@ -18,7 +18,7 @@ RUN apt-get update \
     && apt-get install -y \
         weechat-curses weechat-plugins weechat-python weechat-perl \
     && useradd -m -s /bin/bash xyz \
-    && ln -fs /usr/share/zoneinfo/Europe/Vienna /etc/localtime \
+    && ln -fs /usr/share/zoneinfo/$TIMEZONE /etc/localtime \
     && dpkg-reconfigure --frontend noninteractive tzdata
 RUN chown -R xyz:xyz /home/xyz
 
